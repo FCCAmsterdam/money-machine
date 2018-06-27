@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Money Machine</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pikaday.css">
+</head>
+
+<body>
+  <h1>Money Machine</h1>
+  <form id="add_record" action="#">
+    <input id="date" name="date" autocomplete="off">
+    <input id="category" name="category" autofocus placeholder="category" required>
+    <input id="description" name="description" placeholder="description" required>
+    <input id="amount" name="amount" placeholder="amount" required pattern="[0-9]*">
+    <input type="submit" value="add record">
+  </form>
+
+  <h2>Records</h2>
+  <table id="records">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Category</th>
+        <th>Description</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+  </table>
+
+  <script type="text/javascript" src="js/moment.min.js"></script>
+  <script type="text/javascript" src="js/pikaday.js"></script>
+  <script type="text/javascript" src="js/lib.js"></script>
+
+</body>
+
+</html>
