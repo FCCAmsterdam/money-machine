@@ -1,0 +1,112 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background-blend-mode: overlay;
+    background-image: url('finance-elements-seamless-icons-pattern-modern-line-texture-service-banking-objects-piggy-bank-deposit-box-money-savings-64983484.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+   
+}
+
+h1{
+    background-color:  #e5e5e5;
+    text-align: center;
+    font-family: 'C&C Red Alert [INET]';
+    src: url('/font/C&C Red Alert [INET].ttf');
+    font-size: 67px;
+    font-weight: bold;
+    color:#3d3d3d;
+    text-shadow: 3px 1px 1px rgba(0, 218, 85, 1);
+    border-bottom:solid;
+    border-top:solid;
+}
+
+.container-table{
+    margin-top: 20px;
+    border: solid 2px #3d3d3d;
+    border-radius: 3px;
+    margin: 0 auto;
+    max-width:500px;
+    -webkit-box-shadow: 10px 10px 31px -11px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 31px -11px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 31px -11px rgba(0,0,0,0.75);
+}
+input{
+    width: 200px;
+    height: 20px;
+   display: block;
+    margin: 0 auto;
+    
+}
+.h2-input-money{
+ text-align: center;
+ font-family: 'Roboto', sans-serif;
+}
+
+.border-money-machine{
+    padding-bottom: 4px;
+    border: solid 2px #3d3d3d;
+    border-radius: 3px;
+    margin: 0 auto;
+    width:500px;
+    -webkit-box-shadow: 10px 10px 31px -11px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 31px -11px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 31px -11px rgba(0,0,0,0.75);
+}
+.fa-arrow-circle-down{
+    cursor: pointer;
+    color: #3d3d3d;
+    font-size:30px;
+    float: right;
+    position: relative;
+    bottom: 30px;
+    right:99px;
+    
+}
+.fa-arrow-circle-down:hover{
+    color:#dd2a2a;
+}
+
+
+.footer {
+    z-index:-1;
+    position: absolute;
+    right: 0;
+    
+    left: 0;
+    width: 100%;
+    background-color: #3d3d3d;;
+    color: white;
+    text-align: center;
+}
+
+/* @media only screen and (max-width: 448px){
+    .moneymachine-dash{
+        display:none;
+    }
+} */
+
+
+
+.w3-animate-right {
+	position: relative;
+	animation: animateright 0.5s
+}
+
+@keyframes animateright {
+	from {
+		right: -300px;
+		opacity: 0
+	}
+	to {
+		right: 0;
+		opacity: 1
+	}
+}
+
+.container-table{
+    padding: 20px;
+}
+.container-table-margin-bottom{
+    margin-bottom: 20px;
+}
