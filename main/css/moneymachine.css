@@ -1,8 +1,15 @@
+@font-face {
+  font-family: 'RedAlert';
+  src: url('../fonts/C&C Red Alert [INET].ttf'); /* format('truetype'); */
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   background-blend-mode: overlay;
-  background-image: url('finance-elements-seamless-icons-pattern-modern-line-texture-service-banking-objects-piggy-bank-deposit-box-money-savings-64983484.jpg');
-  background-repeat: no-repeat;
+  background-image: url('../img/background.jpg');
+  background-repeat: repeat;
   background-attachment: fixed;
   background-position: center;
 }
@@ -10,8 +17,7 @@ body {
 h1 {
   background-color: #e5e5e5;
   text-align: center;
-  font-family: 'C&C Red Alert [INET]', sans-serif;
-  src: url('/fonts/C&C Red Alert [INET].ttf');
+  font-family: RedAlert, sans-serif;
   font-size: 67px;
   font-weight: bold;
   color: #3d3d3d;
