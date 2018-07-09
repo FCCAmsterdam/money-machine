@@ -8,7 +8,9 @@
 body {
   font-family: 'Roboto', sans-serif;
   background-blend-mode: overlay;
-  background-image: url('../img/background.jpg');
+  background-color: #e5e5e5;
+
+  /* background-image: url('../img/background.jpg'); */
   background-repeat: repeat;
   background-attachment: fixed;
   background-position: center;
@@ -27,9 +29,10 @@ h1 {
 }
 
 .container-table {
+  background-color: ghostwhite;
   border: solid 2px #3d3d3d;
   border-radius: 3px;
-  margin: 0 auto;
+  margin: 20px auto 0 auto;
   padding: 20px;
   max-width: 500px;
   -webkit-box-shadow: 10px 10px 31px -11px rgba(0, 0, 0, 0.75);
@@ -51,6 +54,7 @@ input {
 
 .border-money-machine {
   padding-bottom: 4px;
+  background-color: ghostwhite;
   border: solid 2px #3d3d3d;
   border-radius: 3px;
   margin: 0 auto;
