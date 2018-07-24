@@ -16,18 +16,19 @@ else {
  echo 'Connected Successfully!';
 }
 
+
 // Fetching email from DB (test)
-$query  = "SELECT email FROM User WHERE id=1";
-$result = mysqli_query($conn, "SELECT * FROM User");
-
-if (!$query) {
-  printf("Error: %s\n", mysqli_error($conn));
-  exit();
-}
-
-while ($row = mysqli_fetch_array($result)) {
-  echo "Email: " . $row['email'] .'<br />';
-}
+// $query2 = "SELECT * FROM User";
+// $result = mysqli_query($conn, $query);
+//
+// if (!$query) {
+//   printf("Error: %s\n", mysqli_error($conn));
+//   exit();
+// }
+//
+// while ($row = mysqli_fetch_array($result)) {
+//   echo "Email: " . $row['email'] .'<br />';
+// }
 
 
 // mysqli_close($conn);

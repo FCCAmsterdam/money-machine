@@ -9,7 +9,7 @@ session_destroy();
 <head>
   <meta charset="UTF-8">
   <title>Error</title>
-  <?php include 'css/css.html'; ?>
+
 </head>
 
 <body>
@@ -18,7 +18,7 @@ session_destroy();
 
           <h3><?= 'You have successfully logged out!'; ?></h3>
 
-          <a href="home.php"><button class="button button-block"/>Home</button></a>
+          <a href="index.php"><button class="button button-block"/>Home</button></a>
 
     </div>
 </body>

@@ -4,4 +4,4 @@ $host = "localhost";
 $user = "root";
 $pass = "";
 $db   = "moneymachine";
-$conn = mysqli_connect($host, $user, $pass, $db) or die($mysqli->error);
+$conn = mysqli_connect($host, $user, $pass, $db) or die('Error connecting to MySQL server.');

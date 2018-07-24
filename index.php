@@ -2,31 +2,35 @@
 /* Main page with two forms: sign up and log in */
 require 'db.php';
 session_start();
+$msg         = "";
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    if (isset($_POST['login'])) { //user logging in
+        require 'login.php';
+    }
+
+    else if (isset($_POST['register'])) { //user registering
+
+        $password    = $_POST['password'];
+        $passconfirm = $_POST['passwordconfirm'];
+
+        if ($password === $passconfirm) {
+          require 'register.php';
+        } else {
+          $msg = "Passwords are not the same. Please try again.";
+        }
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
   <title>Sign-Up/Login Form</title>
-  <!-- <?php include 'css/css.html'; ?> -->
+
 </head>
-
-<?php
-if ($_SERVER['REQUEST_METHOD'] == 'POST')
-{
-    if (isset($_POST['login'])) { //user logging in
-
-        require 'login.php';
-
-    }
-
-    elseif (isset($_POST['register'])) { //user registering
-
-        require 'register.php';
-
-    }
-}
-?>
 <body>
   <div class="form">
 
@@ -38,9 +42,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
       <div class="tab-content">
 
          <div id="login">
-          <h1>Welcome Back!</h1>
+          <h1>Welcome!</h1>
 
-          <form action="home.php" method="post" autocomplete="off">
+          <form action="index.php" method="post" autocomplete="off">
 
             <div class="field-wrap">
               <label>
@@ -67,21 +71,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         <div id="signup">
           <h1>Sign Up for Free</h1>
 
-          <form action="home.php" method="post" autocomplete="off">
+          <form action="index.php" method="post" autocomplete="off">
 
           <div class="top-row">
             <div class="field-wrap">
               <label>
                 First Name<span class="req">*</span>
               </label>
-              <input type="text" required autocomplete="off" name='firstname' />
+              <input type="text" required autocomplete="off" name='firstname' placeholder="i.e. Peter" />
             </div>
 
             <div class="field-wrap">
               <label>
                 Last Name<span class="req">*</span>
               </label>
-              <input type="text"required autocomplete="off" name='lastname' />
+              <input type="text"required autocomplete="off" name='lastname' placeholder="i.e. Parker" />
             </div>
           </div>
 
@@ -89,28 +93,37 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
             <label>
               Email Address<span class="req">*</span>
             </label>
-            <input type="email"required autocomplete="off" name='email' />
+            <input type="email"required autocomplete="off" name='email' placeholder="spider@gmail.com" />
           </div>
 
           <div class="field-wrap">
             <label>
-              Set A Password<span class="req">*</span>
+              Password<span class="req">*</span>
             </label>
             <input type="password"required autocomplete="off" name='password'/>
           </div>
 
-          <button type="submit" class="button button-block" name="register" />Register</button>
+          <div class="field-wrap">
+            <label>
+              Password<span class="req">*</span>
+            </label>
+            <input type="password"required autocomplete="off" name='passwordconfirm'/>
+          </div>
 
+          <button type="submit" class="button button-block" name="register" />Register</button>
+          <br>
+          <br>
+          <?php if($msg != "") echo $msg . "<br><br>"; ?>
           </form>
 
         </div>
 
-      </div><!-- tab-content -->
+      </div>
 
-</div> <!-- /form -->
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+</div>
+  <!-- <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
 
-    <script src="js/index.js"></script>
+    <!-- <script src="js/index.js"></script> -->
 
 </body>
 </html>
