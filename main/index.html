@@ -11,44 +11,72 @@
   />
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
-    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
-    crossorigin="anonymous">
-
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="shortcut icon" href="favicon.ico" />
+  <script src="clearbutton.js"></script>
 </head>
 
-<body>
+    <body >
 
   <header>
     <h1>Money<span class="moneymachine-dash">-</span>Machine</h1>
   </header>
-
   <div class="w3-animate-right">
-
     <div class="border-money-machine">
       <form id="add_record">
         <h2 class="h2-input-money">Input Money</h2>
-        <input type="text">
-        <div class="downArrow bounce">
-          <i class="fas fa-arrow-circle-down"></i>
+        <div class="forms-display-flex">
+          <form id="add_record" action="#">
+            <input class="input-date-category-desicription-amount-submit" id="date" name="date" autocomplete="off">
+            <input class="input-date-category-desicription-amount-submit" id="category" name="category" autofocus placeholder="category" required>
+            <input class="input-date-category-desicription-amount-submit" id="description" name="description" placeholder="description" required>
+            <input class="input-date-category-desicription-amount-submit" id="amount" name="amount" placeholder="&#8364;&#8364;&#8364;&#8364;&#8364;&#8364;&#8364;" required pattern="[0-9]*">
+            <input class="input-date-category-desicription-amount-submit" type="submit" value="add record" style="border-radius: 12.0px; cursor: pointer;">
+          </form>
+        </div>
+            <!-- <div class="input-text-1">
+          
+          <input type="text">
+        </div>
+        <div class="input-text-1">
+
+          <input type="text">
+          </div>
+          
+          <div class="input-text-1">
+            
+              <input type="text">
+            </div>
+     -->
+     <div class="downArrow bounce">
+          <!-- <i class="fas fa-arrow-circle-down"></i> -->
         </div>
       </form>
     </div>
 
-
+    
     <div class="container-table">
-      <h2>Basic Table</h2>
-      <p>The w3-table class defines a basic table:</p>
-
+      <h2> Moneymachine</h2>
+      <p>Basic budget tracker</p>
+      
       <table class="w3-table" id="records">
-        <tr>
-          <th>Date</th>
-          <th>Description</th>
-          <th>Amount</th>
+        <div>
+        <tr id="dateDescription">
+          <th class="tr-date-description-amount">Date</th>
+          <th class="tr-date-description-amount">Description</th>
+          <th class="tr-date-description-amount">Amount</th>
+          <hr>
         </tr>
+      </div>
       </table>
+      <span style="font-size: 19px;
+      font-weight: 700;
+      margin: 20px;">Total:	&#8364;</span>
+     
+      <input onclick="myFunction()"type="submit" id="clearButton" value="clear"  style="border-radius: 12.0px; cursor: pointer;">
+      <!-- <button onclick="myFunction()">Click me</button> -->
+      
     </div>
-
   </div>
 
   <div class="footer">
