@@ -6,11 +6,11 @@
 }
 
 body {
+  background-image: url(../img/background.jpg);
   font-family: 'Roboto', sans-serif;
   background-blend-mode: overlay;
   background-color: #e5e5e5;
   background-repeat: repeat;
-  background-image: url(img/background.jpg);
   background-attachment: fixed;
   background-position: center;
 }
@@ -50,6 +50,7 @@ input {
 }
 
 .h2-input-money {
+  margin-right: 20px;
   text-align: center;
   font-family: 'Roboto', sans-serif;
 }
